@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Morocco Arabian Nights | Private Tours & Small Groups</title>
+  <meta name="description" content="Local-led Morocco private journeys & small group tours. Casablanca 10-day classic culture tour: Marrakech, Sahara, Fez, Chefchaouen, Tangier, Rabat." />
+  <style>
+    :root{
+      --bg:#0b0d12; --card:#111521; --muted:#94a3b8; --text:#e5e7eb;
+      --border:rgba(255,255,255,.10); --accent:#22c55e; --accent2:#f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background: radial-gradient(1200px 500px at 20% -10%, rgba(245,158,11,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(34,197,94,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .brand{display:flex;gap:10px;align-items:center;cursor:pointer;text-decoration:none}
+    .logo{width:38px;height:38px;border-radius:14px;border:1px solid var(--border);display:grid;place-items:center;box-shadow:var(--shadow)}
+    .brand small{display:block;color:var(--muted)}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);padding:10px 14px;border-radius:14px;
+      text-decoration:none;display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+    .btn.primary{background:linear-gradient(135deg, rgba(34,197,94,.95), rgba(34,197,94,.65));border-color:rgba(34,197,94,.35)}
+    .btn.secondary{background:rgba(255,255,255,.06)}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{padding:44px 0 28px}
+    .grid{display:grid;gap:18px}
+    .heroGrid{grid-template-columns:1.35fr .65fr}
+    @media (max-width:900px){.heroGrid{grid-template-columns:1fr}}
+    h1{margin:10px 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.02em}
+    @media (max-width:900px){h1{font-size:34px}}
+    p{color:rgba(229,231,235,.88);line-height:1.6;margin:0}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{font-size:12px;color:rgba(229,231,235,.9);border:1px solid var(--border);background:rgba(255,255,255,.04);padding:6px 10px;border-radius:999px}
+    .card{border:1px solid var(--border);background:rgba(17,21,33,.80);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card.pad{padding:18px}
+    .kvs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    @media (max-width:900px){.kvs{grid-template-columns:1fr}}
+    .kv{border:1px solid var(--border);background:rgba(255,255,255,.03);border-radius:16px;padding:14px}
+    .kv b{display:block;margin-bottom:6px}
+    section{padding:26px 0}
+    h2{font-size:26px;margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+    .tourGrid{grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:900px){.tourGrid{grid-template-columns:1fr}}
+    .tourHead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+    .badge{font-size:12px;border-radius:999px;padding:6px 10px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
+    .badge.hot{border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.12)}
+    details{border:1px solid var(--border);border-radius:16px;padding:12px 12px;background:rgba(255,255,255,.03)}
+    summary{cursor:pointer;font-weight:600}
+    .day{border:1px solid var(--border);border-radius:14px;padding:10px;background:rgba(17,21,33,.75);margin-top:10px}
+    .day b{display:block;margin-bottom:6px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:900px){.two{grid-template-columns:1fr}}
+    label{font-size:12px;color:var(--muted);display:block;margin:10px 0 6px}
+    input, textarea{width:100%;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);padding:12px 12px;border-radius:14px;outline:none}
+    textarea{min-height:120px;resize:vertical}
+    .foot{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);font-size:13px}
+    .floatWA{position:fixed;right:18px;bottom:18px;z-index:1000}
+    .floatWA a{box-shadow:var(--shadow)}
+    .divider{height:1px;background:var(--border);margin:14px 0}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <div class="logo">📍</div>
+      <div>
+        <div id="brandName" style="font-weight:700">Morocco Arabian Nights</div>
+        <small id="brandTag">Local-led, end-to-end private journeys</small>
+      </div>
+    </a>
+    <div class="btns">
+      <button class="btn secondary" id="langBtn">中文</button>
+      <a class="btn primary" id="waTop" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn" href="#contact">✉️ Get itinerary</a>
+    </div>
+  </div>
+</header>
+
+<div class="floatWA">
+  <a class="btn primary" id="waFloat" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+</div>
+
+<main id="top" class="wrap">
+  <section class="hero">
+    <div class="grid heroGrid">
+      <div>
+        <div class="chips">
+          <span class="chip">Casablanca · Marrakech · Sahara · Fez</span>
+          <span class="chip">Private Tour / Small Group</span>
+          <span class="chip">English + 中文</span>
+        </div>
+        <h1 id="heroTitle">Let locals handle Morocco — you just enjoy the journey.</h1>
+        <p id="heroSub">Signature itineraries + fully customized planning. Airport pickup, private vehicles, trusted riads/camps, and on-trip support.</p>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" id="waHero" target="_blank" rel="noopener">💬 WhatsApp now</a>
+          <a class="btn" href="#contact">✉️ Request a quote</a>
+        </div>
+
+        <div class="kvs">
+          <div class="kv">
+            <b id="kv1t">Reliable local network</b>
+            <div class="muted" id="kv1d">Drivers, riads, desert camps & experience providers we trust.</div>
+          </div>
+          <div class="kv">
+            <b id="kv2t">Real experiences</b>
+            <div class="muted" id="kv2d">Iconic highlights + hidden gems, balanced pace.</div>
+          </div>
+          <div class="kv">
+            <b id="kv3t">Bilingual support</b>
+            <div class="muted" id="kv3d">Smooth planning and coordination for international travelers.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <h2 style="margin:0 0 6px" id="quickTitle">Quick contact</h2>
+        <div class="muted">WhatsApp / Phone: <b>+212 662-612-022</b></div>
+        <div class="muted">Email: <b>moroccoarabiannights@gmail.com</b></div>
+        <div class="divider"></div>
+        <div class="muted" id="quickBulletsTitle"><b>What you’ll get</b></div>
+        <ul class="muted" style="margin:8px 0 0 18px;line-height:1.7">
+          <li id="qb1">A draft itinerary within 24–48 hours</li>
+          <li id="qb2">Transparent package quote (per-person + trip package)</li>
+          <li id="qb3">On-trip support and flexible adjustments</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tours">
+    <h2 id="tourTitle">Most requested itinerary</h2>
+    <p class="muted" id="tourSub">Casablanca – 10 Days Classic Culture Tour (Casa10C). Fully customizable.</p>
+
+    <div class="grid tourGrid" style="margin-top:14px">
+      <div class="card pad">
+        <div class="tourHead">
+          <div>
+            <div style="font-weight:700" id="casaTitle">Casablanca – 10 Days Classic Culture Tour</div>
+            <div class="muted" id="casaMeta">10 days · Quote based on season & group size</div>
+          </div>
+          <span class="badge hot">CLASSIC</span>
+        </div>
+
+        <div style="margin-top:10px" class="chips" id="casaChips">
+          <span class="chip">Hassan II Mosque</span>
+          <span class="chip">Marrakech</span>
+          <span class="chip">Ait Benhaddou</span>
+          <span class="chip">Todra Gorge</span>
+          <span class="chip">Merzouga Sahara</span>
+          <span class="chip">Fez</span>
+          <span class="chip">Chefchaouen</span>
+          <span class="chip">Tangier</span>
+          <span class="chip">Rabat</span>
+        </div>
+
+        <details style="margin-top:12px">
+          <summary id="itSum">View day-by-day itinerary</summary>
+
+          <div class="day"><b>Day 1: Arrive in Casablanca</b>
+            Welcome to the White City. Visit Hassan II Mosque, stroll along the coastal boulevard and city squares. Optional: dinner at Rick’s Café.
+          </div>
+
+          <div class="day"><b>Day 2: Casablanca → Marrakech</b>
+            Bahia Palace, Majorelle Garden, Jemaa el-Fnaa, and Koutoubia Mosque (outside). Optional: Royal Mansour afternoon tea, traditional hammam, Ali House show dinner.
+          </div>
+
+          <div class="day"><b>Day 3: Marrakech → High Atlas (Tizi n’Tichka) → Ait Benhaddou → Ouarzazate</b>
+            Photo stops in Berber villages, UNESCO Ait Benhaddou, Taourirt Kasbah. Overnight in Ouarzazate.
+          </div>
+
+          <div class="day"><b>Day 4: Ouarzazate → Todra Gorge → Merzouga Sahara</b>
+            Walk in Todra Gorge. Drive via Ziz Valley/Erfoud/Rissani. Camel ride for sunset + sandboarding. Overnight in desert camp or hotel.
+          </div>
+
+          <div class="day"><b>Day 5: Merzouga → Ifrane/Azrou → Fez</b>
+            Sunrise in the Sahara, return by camel. Drive to Fez via Ifrane and Azrou cedar forest (possible wild monkeys). Overnight in Fez.
+          </div>
+
+          <div class="day"><b>Day 6: Fez → Chefchaouen</b>
+            Explore Fez (Royal Palace gate, Jewish quarter, tanneries and historical sites). Arrive Chefchaouen in the evening.
+          </div>
+
+          <div class="day"><b>Day 7: Chefchaouen → Tangier</b>
+            Blue City stroll. After lunch, drive
