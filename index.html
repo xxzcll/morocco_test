@@ -194,4 +194,200 @@
           </div>
 
           <div class="day"><b>Day 7: Chefchaouen → Tangier</b>
-            Blue City stroll. After lunch, drive
+            Blue City stroll. After lunch, drive to Tangier. Overnight in Tangier.
+          </div>
+
+          <div class="day"><b>Day 8: Tangier → Rabat</b>
+            Cap Spartel, Hercules Cave, Café Hafa. After lunch, continue to Rabat. Overnight in Rabat.
+          </div>
+
+          <div class="day"><b>Day 9: Rabat → Casablanca</b>
+            Rabat highlights (Oudaya Kasbah, Hassan Tower, Mausoleum of Mohammed V). Return to Casablanca. Optional dinner show / Rick’s Café.
+          </div>
+
+          <div class="day"><b>Day 10: Departure</b>
+            Transfer to Casablanca airport. Tour concludes.
+          </div>
+        </details>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" id="waCasa" target="_blank" rel="noopener">💬 Ask for pricing on WhatsApp</a>
+          <a class="btn" href="#contact">✉️ Request a quote</a>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <h2 style="margin:0 0 8px" id="pricingTitle">Packages (3–4 tiers)</h2>
+        <p class="muted" id="pricingSub">
+          We’ll quote a combined price: per-person + trip package (vehicle/driver/guide). Choose a tier, then customize.
+        </p>
+        <div class="divider"></div>
+        <div class="muted" style="line-height:1.7">
+          <b>Essential</b> – clean comfort, best value (standard riads/camps)<br/>
+          <b>Comfort (Most Popular)</b> – better locations & smoother pacing<br/>
+          <b>Premium</b> – upgraded stays + more experiences included<br/>
+          <b>Luxury</b> – top boutique/luxury stays + VIP transfers + luxury desert camp
+        </div>
+        <div class="divider"></div>
+        <p class="muted" id="includeHint"><b>Included typically:</b> airport pickup, private vehicle & driver, local guidance, booking support, on-trip coordination. Exact inclusions depend on tier.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 id="contactTitle">Request a quote</h2>
+    <p class="muted" id="contactSub">Fill the form to generate an email draft, or message us on WhatsApp for fastest response.</p>
+
+    <div class="two" style="margin-top:14px">
+      <div class="card pad">
+        <div class="two">
+          <div>
+            <label id="lName">Name</label>
+            <input id="name" placeholder="Your name" />
+          </div>
+          <div>
+            <label id="lEmail">Email</label>
+            <input id="email" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="two">
+          <div>
+            <label id="lDates">Travel dates</label>
+            <input id="dates" placeholder="e.g., Apr 10–18" />
+          </div>
+          <div>
+            <label id="lPeople">Travelers</label>
+            <input id="people" placeholder="e.g., 2 adults + 1 kid" />
+          </div>
+        </div>
+
+        <label id="lInterest">Interests</label>
+        <input id="interest" placeholder="Desert, culture, photo, food, hiking..." />
+
+        <label id="lBudget">Budget (optional)</label>
+        <input id="budget" placeholder="Optional" />
+
+        <label id="lMsg">Message</label>
+        <textarea id="msg" placeholder="Tell us your must-do list and any no-go items."></textarea>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" id="sendEmail" href="#">✉️ Generate email</a>
+          <a class="btn" id="waForm" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+
+        <p class="muted" style="margin-top:10px">
+          Tip: WhatsApp is fastest for travel pricing & customization.
+        </p>
+      </div>
+
+      <div class="card pad">
+        <h2 style="margin:0 0 8px" id="whyTitle">Why Morocco Arabian Nights</h2>
+        <div class="muted" style="line-height:1.8" id="whyText">
+          Local-led service from arrival to departure. We combine iconic highlights with authentic experiences, with a clear process and reliable partners.
+        </div>
+        <div class="divider"></div>
+        <div class="muted" style="line-height:1.8">
+          WhatsApp/Phone: <b>+212 662-612-022</b><br/>
+          Email: <b>moroccoarabiannights@gmail.com</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    © <span id="year"></span> Morocco Arabian Nights · Private tours & small groups
+  </div>
+</main>
+
+<script>
+  const PHONE = "+212 662-612-022";
+  const EMAIL = "moroccoarabiannights@gmail.com";
+  const phoneDigits = PHONE.replace(/\\D/g, "");
+
+  function buildWhatsAppText(){
+    const name = document.getElementById("name").value || "";
+    const dates = document.getElementById("dates").value || "";
+    const people = document.getElementById("people").value || "";
+    const interest = document.getElementById("interest").value || "Casablanca 10-Day Classic Culture Tour (Casa10C)";
+    const budget = document.getElementById("budget").value || "";
+    const msg = document.getElementById("msg").value || "";
+    return `Hello! I'd like a Morocco itinerary & quote.\\nName: ${name}\\nDates: ${dates}\\nTravelers: ${people}\\nTour/Interests: ${interest}\\nBudget: ${budget}\\nNotes: ${msg}`;
+  }
+
+  function setWA(linkId){
+    const url = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(buildWhatsAppText())}`;
+    document.getElementById(linkId).href = url;
+  }
+
+  ["waTop","waHero","waFloat","waCasa","waForm"].forEach(id=>{
+    document.getElementById(id).addEventListener("click", ()=>setWA(id));
+  });
+
+  document.getElementById("sendEmail").addEventListener("click", (e)=>{
+    e.preventDefault();
+    const name = document.getElementById("name").value || "";
+    const dates = document.getElementById("dates").value || "";
+    const people = document.getElementById("people").value || "";
+    const interest = document.getElementById("interest").value || "Casablanca 10-Day Classic Culture Tour (Casa10C)";
+    const budget = document.getElementById("budget").value || "";
+    const msg = document.getElementById("msg").value || "";
+    const subject = encodeURIComponent("Morocco Trip Inquiry | Morocco Arabian Nights");
+    const body = encodeURIComponent(
+      `Hello,\\n\\nI'd like a Morocco itinerary & quote.\\n\\nName: ${name}\\nEmail: ${document.getElementById("email").value || ""}\\nDates: ${dates}\\nTravelers: ${people}\\nTour/Interests: ${interest}\\nBudget: ${budget}\\n\\nNotes:\\n${msg}\\n`
+    );
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Language toggle
+  let lang = "EN";
+  const langBtn = document.getElementById("langBtn");
+  langBtn.addEventListener("click", ()=>{
+    lang = (lang==="EN") ? "CN" : "EN";
+    langBtn.textContent = (lang==="EN") ? "中文" : "EN";
+    applyLang();
+  });
+
+  function applyLang(){
+    const cn = (lang==="CN");
+    document.title = cn ? "摩洛哥阿拉伯之夜｜私享定制与小团" : "Morocco Arabian Nights | Private Tours & Small Groups";
+    document.getElementById("brandName").textContent = cn ? "摩洛哥阿拉伯之夜" : "Morocco Arabian Nights";
+    document.getElementById("brandTag").textContent = cn ? "当地人带路｜从落地到返程的一站式私享定制" : "Local-led, end-to-end private journeys";
+    document.getElementById("heroTitle").textContent = cn ? "把摩洛哥交给当地人，你只负责享受。" : "Let locals handle Morocco — you just enjoy the journey.";
+    document.getElementById("heroSub").textContent = cn ? "主打行程 + 全定制。接送机、私家车、靠谱住宿/营地与全程对接。" : "Signature itineraries + fully customized planning. Airport pickup, private vehicles, trusted riads/camps, and on-trip support.";
+    document.getElementById("quickTitle").textContent = cn ? "快速联系" : "Quick contact";
+    document.getElementById("qb1").textContent = cn ? "24–48 小时内给你初版行程" : "A draft itinerary within 24–48 hours";
+    document.getElementById("qb2").textContent = cn ? "清晰报价：按人头 + 行程打包" : "Transparent package quote (per-person + trip package)";
+    document.getElementById("qb3").textContent = cn ? "行中对接与灵活调整" : "On-trip support and flexible adjustments";
+    document.getElementById("tourTitle").textContent = cn ? "最受欢迎的行程" : "Most requested itinerary";
+    document.getElementById("tourSub").textContent = cn ? "卡萨布兰卡出发｜10天经典文化之旅（Casa10C），可完全定制。" : "Casablanca – 10 Days Classic Culture Tour (Casa10C). Fully customizable.";
+    document.getElementById("casaTitle").textContent = cn ? "卡萨布兰卡出发｜10天经典文化之旅" : "Casablanca – 10 Days Classic Culture Tour";
+    document.getElementById("casaMeta").textContent = cn ? "10天 · 按季节与人数报价" : "10 days · Quote based on season & group size";
+    document.getElementById("itSum").textContent = cn ? "查看每日行程" : "View day-by-day itinerary";
+    document.getElementById("pricingTitle").textContent = cn ? "套餐档位（3–4档）" : "Packages (3–4 tiers)";
+    document.getElementById("pricingSub").textContent = cn ? "报价通常为：按人头 + 行程打包（车/司机/导游）。先选档位，再定制细节。" : "We’ll quote a combined price: per-person + trip package (vehicle/driver/guide). Choose a tier, then customize.";
+    document.getElementById("includeHint").innerHTML = cn
+      ? "<b>常见包含：</b>接送机、私家车与司机、当地向导、预订协助、行中对接。具体包含以你选的档位为准。"
+      : "<b>Included typically:</b> airport pickup, private vehicle & driver, local guidance, booking support, on-trip coordination. Exact inclusions depend on tier.";
+    document.getElementById("contactTitle").textContent = cn ? "获取报价/定制行程" : "Request a quote";
+    document.getElementById("contactSub").textContent = cn ? "填写表单可生成邮件草稿；最快方式是 WhatsApp 直接聊。" : "Fill the form to generate an email draft, or message us on WhatsApp for fastest response.";
+    document.getElementById("lName").textContent = cn ? "姓名" : "Name";
+    document.getElementById("lEmail").textContent = cn ? "邮箱" : "Email";
+    document.getElementById("lDates").textContent = cn ? "出行日期" : "Travel dates";
+    document.getElementById("lPeople").textContent = cn ? "人数（成人/儿童）" : "Travelers";
+    document.getElementById("lInterest").textContent = cn ? "偏好/想去的" : "Interests";
+    document.getElementById("lBudget").textContent = cn ? "预算（可选）" : "Budget (optional)";
+    document.getElementById("lMsg").textContent = cn ? "补充说明" : "Message";
+    document.getElementById("sendEmail").textContent = cn ? "✉️ 生成邮件" : "✉️ Generate email";
+    document.getElementById("waFloat").textContent = cn ? "💬 WhatsApp 咨询" : "💬 Chat on WhatsApp";
+    document.getElementById("whyTitle").textContent = cn ? "为什么选我们" : "Why Morocco Arabian Nights";
+    document.getElementById("whyText").textContent = cn
+      ? "当地人带路，从落地到返程一站式服务。经典打卡 + 小众体验，流程清晰，合作伙伴可靠。"
+      : "Local-led service from arrival to departure. We combine iconic highlights with authentic experiences, with a clear process and reliable partners.";
+  }
+  applyLang();
+</script>
+</body>
+</html>
